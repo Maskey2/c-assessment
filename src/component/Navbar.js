@@ -6,24 +6,27 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
        link: {
-        fontFamily: 'Poppins',
         fontSize: '20px',
         textDecoration: 'none',
-        color: 'black',
+        color: '#fff',
         display: 'flex',
         width: '170px',
         justifyContent: 'center',
         '&:hover': {
-            transform: 'scale(1.01)',
+            transform: 'scale(1.1)',
             transition: 'transform .3s ease',
-            color: 'white',
+            color: '#c3f63F',
         },
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '12px',
+          width: '85px',
+        }, 
     },
 }));
 export default function Navbar() {
     const classes = useStyles();
   return (
-    <AppBar position="relative" style={{backgroundColor: '#33B3A6 ',  color: 'white'}}>
+    <AppBar position="relative" style={{backgroundColor: '#353b48 ',  color: 'white'}}>
         <Toolbar>
         <Typography variant="h6" >
           <Link to="/"  className={classes.link}>Home</Link>
