@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/HafferXH-Medium.otf';
+import './fonts/HafferXH-Regular.otf';
+import './fonts/HafferXH-Bold.otf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,85 +1,114 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import CardMedia from '@material-ui/core/CardMedia';
+import Showerbg from './../assets/imgs/shower-bg.jpg';
+import Foambg from './../assets/imgs/foam-bg.jpg';
+import Sweetbg from './../assets/imgs/fluffy-bg.jpg';
+import Shower from './../assets/imgs/shower-product.png';
+import Foam from './../assets/imgs/fluffy-product.png';
+import Sweet from './../assets/imgs/foam-product.png';
+import './../challenge2.css'
 
-const useStyles = makeStyles((theme) => ({ 
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+
+const useStyles = makeStyles((theme) => ({
+  background:{
+    height:'93.5vh',
+    backgroundColor:'#f1f0ef',
+    [theme.breakpoints.down('sm')]: {
+      height:'auto',
+    }, 
   },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedia: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
+  info:{
+    verticalAlign:'middle',
+    fontSize:'23px',
+    lineHeight:'1'
   },
 }));
 
-const cards = [1, 2, 3];
+const product = [
+  {
+    title: 'Shower Foam',
+    bgSrc:Showerbg,
+    bsrc:Shower,
+    subheader: 'Motivation and focus*',
+    price:'50.00',
+    subscribePrice:'42.50',
+    buttonText: 'Add to cart',
+    keyIng:'Key Ingredients:',
+    keyValue:'Warm Sugar, Vanilla, Fresh Pancakes',
+    buttonstyle:'#eeea8c'
+  },
+  {
+    title: 'Sea Foam',
+    bgSrc:Foambg,
+    bsrc:Sweet,
+    subheader: 'Connection and joy*',
+    price:'50.00',
+    subscribePrice:'42.50',
+    buttonText: 'Add to cart',
+    keyIng:'Key Ingredients:',
+    keyValue:'Sea Salt, beach Water, Fresh Coconut, Sprinkles',
+    buttonstyle:'#b0eaeb'
+  },
+  {
+    title: 'Sweet Fluffy',
+    bgSrc:Sweetbg,
+    bsrc:Foam,
+    subheader: 'Deep, restorative sleep*',
+    price:'50.00',
+    subscribePrice:'42.50',
+    buttonText: 'Add to cart',
+    keyIng:'Key Ingredients:',
+    keyValue:'Fresh Berries, Rainbow Sprinkles, Fairy Floss',
+    buttonstyle:'#ffc0b2'
+  },
+];
 
-export default function C2() {
+export default function Challenge2() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>     
-      <main>
-        {/* Hero unit */}
-        <div className={classes.heroContent}>
-         
-        </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
+    <div className={classes.background}>     
+      <Container maxWidth="md" component="main" style={{paddingTop:'60px'}}>
+        <Grid container spacing={5} >
+          {product.map((product) => (
+            <Grid item key={product.title} xs={12} sm={6} md={4}>
+              <Card className="product-card">             
+                <CardMedia
+                    component="img"
+                    alt={product.ttile}
+                    height="200"
+                    image={product.bgSrc}
+                    title={product.ttile}
                   />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </main>
-    
-    </React.Fragment>
+                  <img src={product.bsrc} className="mainimg" alt="Product Image"/>
+                <Typography className="product-title">{product.title}</Typography>
+                <Typography  className="product-subtitle">{product.subheader}</Typography>
+                <CardContent >
+                    <span style={{fontFamily: "HafferXH-Bold"}}> {product.keyIng} </span>
+                    <span style={{fontFamily: "HafferXH-Regular"}}>  {product.keyValue}  </span>                 
+                </CardContent>
+                <CardActions>
+                  <button className="addToCart2">
+                    {product.buttonText}  <span className="line"></span>  ${product.price} </button>
+                </CardActions>
+                <CardActions style={{marginBottom:'20px'}}>
+                  <button className="btnSubscribe" style={{backgroundColor:`${product.buttonstyle}`}}>
+                    <span className={classes.info}> &#9432; </span>Subscribe  <span className="line"></span>  ${product.subscribePrice}
+                  </button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+      
+    </div>
   );
 }

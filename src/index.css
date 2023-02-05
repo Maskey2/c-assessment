@@ -14,6 +14,7 @@ body, html {
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden;
   }
+ 
   .addToCart {
     font-family: 'Open Sans',sans-serif;
     background-color:#353b48;
@@ -48,4 +49,10 @@ body, html {
     .wrapper{
       padding-top:40px;
     }
+    body, html { 
+      overflow-y: unset; /* Hide vertical scrollbar */
+      overflow-x: unset;
+      }
   }
+
+ 
