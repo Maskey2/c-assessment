@@ -4,6 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import './../index.css'
+
 const useStyles = makeStyles(theme => ({
        link: {
         fontSize: '20px',
@@ -18,8 +20,8 @@ const useStyles = makeStyles(theme => ({
             color: '#c3f63F',
         },
         [theme.breakpoints.down('sm')]: {
-          fontSize: '12px',
-          width: '85px',
+          fontSize: '10px',
+          width: '65px',
         }, 
     },
 }));
