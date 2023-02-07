@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import './../index.css'
+import './../challenge1.css'
 
 const useStyles = makeStyles((theme) => ({
     background:{

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   info:{
     verticalAlign:'middle',
-    fontSize:'23px',
+    fontSize:'22px',
     lineHeight:'1'
   },
 }));
