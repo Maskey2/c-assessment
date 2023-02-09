@@ -1,79 +1,89 @@
  /* Challenge2 CSS*/
  @font-face {
-    font-family: "HafferXH-Medium";
-    src: local("HafferXH-Medium"),
+   font-family: "HafferXH-Medium";
+   src: local("HafferXH-Medium"),
      url("./fonts/HafferXH-Medium.otf") format("truetype");
-    font-weight: bold;
-    }
-@font-face {
-    font-family: "HafferXH-Bold";
-    src: local("HafferXH-Bold"),
-        url("./fonts/HafferXH-Bold.otf") format("truetype");
-    font-weight: bold;
-    }
-@font-face {
-    font-family: "HafferXH-Regular";
-    src: local("HafferXH-Regular"),
-        url("./fonts/HafferXH-Regular.otf") format("truetype");
-    font-weight: bold;
-    }
-.mainimg{
-    height:265px;
-    display: flex;
-    margin: -64% auto 0;
-    }
-.product-title{
-    font-family: 'HafferXH-Medium'!important;
-    font-size: 25px!important;
-    padding:0 15px;
-}
-.product-subtitle{
-    font-family: 'HafferXH-Regular'!important;
-    padding:5px 15px;
-    font-size: 17px!important;
-}
-  .addToCart2 {
-    font-family: "HafferXH-Regular";
-    background-color:transparent;
-    border: 1px solid black;
-    width: 100%;
-    font-size:15px;
-    padding:18px;
-    border-radius:70px; 
-    letter-spacing:0.5px;
-  }
-  .addToCart2:hover{
-    background-color:black;
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-  }  
-  .product-card{
-    box-shadow: none!important;
-    border-radius: 2px!important;
-  }
-  .product-card:hover{
-    transform: scale(1.04);
-    transition: 0.3s;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 16px 0px, rgba(0, 0, 0, 0.04) 0px 0px 0px 1px!important;
-  } 
-  .btnSubscribe {
-    font-family: "HafferXH-Regular";
-    border: none;
-    width: 100%;
-    font-size:15px;
-    padding:18px;
-    border-radius:70px; 
-  }
-  .line{
-    background-color: #000;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 20%;
-    margin:0 4px;
-  }
- 
+   font-weight: bold;
+ }
+
+ @font-face {
+   font-family: "HafferXH-Bold";
+   src: local("HafferXH-Bold"),
+     url("./fonts/HafferXH-Bold.otf") format("truetype");
+   font-weight: bold;
+ }
+
+ @font-face {
+   font-family: "HafferXH-Regular";
+   src: local("HafferXH-Regular"),
+     url("./fonts/HafferXH-Regular.otf") format("truetype");
+   font-weight: bold;
+ }
+
+ .mainimg {
+   height: 265px;
+   display: flex;
+   margin: -64% auto 0;
+ }
+
+ .product-title {
+   font-family: 'HafferXH-Medium' !important;
+   font-size: 25px !important;
+   padding: 0 15px;
+ }
+
+ .product-subtitle {
+   font-family: 'HafferXH-Regular' !important;
+   padding: 5px 15px;
+   font-size: 17px !important;
+ }
+
+ .addToCart2 {
+   font-family: "HafferXH-Regular";
+   background-color: transparent;
+   border: 1px solid black;
+   width: 100%;
+   font-size: 15px;
+   padding: 18px;
+   border-radius: 70px;
+   letter-spacing: 0.5px;
+ }
+
+ .addToCart2:hover {
+   background-color: black;
+   color: white;
+   transition: 0.2s;
+   cursor: pointer;
+ }
+
+ .product-card {
+   box-shadow: none !important;
+   border-radius: 2px !important;
+ }
+
+ .product-card:hover {
+   transform: scale(1.04);
+   transition: 0.3s;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 16px 0px, rgba(0, 0, 0, 0.04) 0px 0px 0px 1px !important;
+ }
+
+ .btnSubscribe {
+   font-family: "HafferXH-Regular";
+   border: none;
+   width: 100%;
+   font-size: 15px;
+   padding: 18px;
+   border-radius: 70px;
+ }
+
+ .line {
+   background-color: #000;
+   content: "";
+   display: inline-block;
+   height: 1px;
+   position: relative;
+   vertical-align: middle;
+   width: 20%;
+   margin: 0 4px;
+ }

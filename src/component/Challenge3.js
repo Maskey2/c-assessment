@@ -5,8 +5,8 @@ import './../challenge3.css'
 import ProductCard from './ProductCard';
 
 const useStyles = makeStyles((theme) => ({
-  background:{
-    height:'100%',
+  background: {
+    height: '100%',
   }
 }));
 
@@ -16,7 +16,7 @@ export default function Challenge3() {
   const [error, setError] = useState(null);
   const classes = useStyles();
 
-  
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -31,19 +31,19 @@ export default function Challenge3() {
       }
       finally {
         setLoading(false);
-     }
+      }
     };
     getData();
   }, []);
-  
+
   return (
-    <div className={classes.background}>    
+    <div className={classes.background}>
       {loading && <div className="loader"></div>}
       {error && (
-        <div>{`There is a problem fetching the post data - ${error}`}</div>
+        <div>{`Take time to grab a cup of coffee and try again! - ${error}`}</div>
       )}
       {data &&
-      <ProductCard props = {data}/>
+        <ProductCard props={data} />
       }
     </div>
   );

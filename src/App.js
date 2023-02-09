@@ -5,12 +5,14 @@ import C1 from "./component/Challenge1";
 import C2 from "./component/Challenge2";
 import C3 from "./component/Challenge3";
 import Navbar from "./component/Navbar";
+import ProductDetail from "./component/ProductDetail";
 
 function App() {
   return (
     <BrowserRouter>   
     <Navbar/>  
       <Switch>
+        <Route exact path="/products/:id" render={(routeProps) => <ProductDetail/>}/>
         <Route exact path="/" component={Home}></Route>   
         <Route exact path="/challenge1" component={C1}></Route>   
         <Route exact path="/challenge2" component={C2}></Route>    

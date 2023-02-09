@@ -9,12 +9,9 @@ import './fonts/HafferXH-Bold.otf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
-   
-  // </React.StrictMode>
-   <div>
+  <React.StrictMode>
     <App />
-   </div>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

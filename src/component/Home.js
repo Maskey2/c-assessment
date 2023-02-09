@@ -29,7 +29,7 @@ export default function Home() {
     <Container style={{marginTop:'40px'}}>
     <h1 className={classes.title}>Assesment Dashboard</h1>
     <ul>
-        <li> <Link to="/Challenge1"  className={classes.link}>Challenge #1: Button Hover</Link></li>
+        <li><Link to="/Challenge1"  className={classes.link}>Challenge #1: Button Hover</Link></li>
         <li><Link to="/Challenge2"  className={classes.link}>Challenge #2: Product Card CSS Fun</Link></li>
         <li><Link to="/Challenge3"  className={classes.link}>Challenge #3: Product Collection Gallery</Link></li>
     </ul>
